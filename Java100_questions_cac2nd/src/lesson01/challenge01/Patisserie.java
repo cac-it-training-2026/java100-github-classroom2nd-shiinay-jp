@@ -16,4 +16,12 @@ package lesson01.challenge01;
 
 public class Patisserie {
 
+	public static void main(String[] args) {
+
+		System.out.println("大変お待たせ遺体しました");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+	}
+
 }
