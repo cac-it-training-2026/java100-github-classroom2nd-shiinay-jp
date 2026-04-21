@@ -41,6 +41,52 @@
 
 package lesson01.challenge07;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+
+	public static void main(String[] args) throws IOException {
+
+		double shitoron_num = 30.0;
+		double shokora_num = 30.0;
+		double pisutashu_num = 30.0;
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("本日のおすすめ商品です。\n");
+		System.out.println("シトロン　　　\\250・・・" + shitoron_num + "個");
+		System.out.println("ショコラ　　　\\280・・・" + shokora_num + "個");
+		System.out.println("ピスターシュ　\\320・・・" + pisutashu_num + "個");
+
+		System.out.println("それぞれ何個ずつ買いますか？");
+
+		System.out.print("シトロン　　　>");
+		String shitoron = reader.readLine();
+		double shitoron_num_2 = Double.parseDouble(shitoron);
+
+		System.out.print("ショコラ　　　>");
+		String shokora = reader.readLine();
+		double shokora_num_2 = Double.parseDouble(shokora);
+
+		System.out.print("ピスターシュ　>");
+		String pisutashu = reader.readLine();
+		double pisutashu_num_2 = Double.parseDouble(pisutashu);
+
+		System.out.println("シトロン　　　" + shitoron + "個");
+		System.out.println("ショコラ　　　" + shokora + "個");
+		System.out.println("ピスターシュ　" + pisutashu + "個\n");
+		System.out.println("合計個数　　" + (shitoron_num_2 + shokora_num_2 + pisutashu_num_2) + "個");
+		System.out
+				.println("合計金額　" + (int) (shitoron_num_2 * 250 + shokora_num_2 * 280 + pisutashu_num_2 * 320) + "円\n");
+		System.out.println("をお買い上げですね。\n承りました。\n");
+
+		System.out.println("本日のおすすめ商品です。\n");
+		System.out.println("シトロン　　　\\250・・・残り" + (int) (shitoron_num - shitoron_num_2) + "個");
+		System.out.println("ショコラ　　　\\280・・・残り" + (int) (shokora_num - shokora_num_2) + "個");
+		System.out.println("ピスターシュ　\\320・・・残り" + (int) (pisutashu_num - pisutashu_num_2) + "個");
+
+	}
 
 }
