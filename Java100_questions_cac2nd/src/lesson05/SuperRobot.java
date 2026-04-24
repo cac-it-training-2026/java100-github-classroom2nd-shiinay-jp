@@ -1,63 +1,9 @@
-/**
- * 第5章 ロボット工場のお仕事
- *
- * 問題9  あとかたづけロボットの追加
- *
- * 引数として渡された食材を
- * 0でクリアするクラスを作成します。
- *
- * コメントの位置に適切なコードを記述し、
- * 実行例と同じメッセージを表示してください。
- *
- * <実行例>
- *  Rさん：
- *  あとかたづけをしてくれるロボットも欲しいところですね。
- *
- *  G博士：
- *  そうれはもう作ってあるぞ。
- *
- *  Rさん：
- *  えっ！どうやって使うんですか？
- *
- *  G博士：
- *  今まで使ってきた材料を一つにまとめて渡すときれいにしてくれるんじゃ。
- *
- *  Rさん：
- *  早速やってみます。
- *
- *  小麦粉の量を入力してください（グラム）＞○
- *
- *  砂糖の量を入力してください（グラム）＞○
- *
- *  卵の個数を入力してください＞○
- *
- *  バターの量を入力してください（グラム）＞○
- *
- *  【※調理できる料理】が出来ました。
- *
- *  あとかたづけをします。
- *
- *  小麦粉  ：0g
- *  砂糖    ：0g
- *  卵      ：0個
- *  バター  ：0g
- *
- *  きれいになりました。
- *
- */
-
-package lesson05.challenge09;
+package lesson05;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//ここに問題8で作成したクラス(変更なし)を記述してください。
-
-//ここに次の条件を満たすクラスを作成してください。
-//クラス名：ClearRobot
-//メソッド名：clearTable(引数int[] ingredients
-//戻り値void、渡された配列を0でクリアする)
 class Robot {
 
 	private int energy;
@@ -149,9 +95,16 @@ class Robot {
 		}
 
 	}
+
+	public void cleanDish() {
+
+		System.out.println("お皿を片づけました。");
+
+	}
+
 }
 
-public class RobotMaker {
+public class SuperRobot {
 
 	public static void main(String[] args) throws IOException {
 
@@ -213,7 +166,10 @@ public class RobotMaker {
 		System.out.println("卵      ：" + ingredients[2] + "個");
 		System.out.println("バター  ：" + ingredients[3] + "g");
 
-		System.out.println("\nきれいになりました。");
+		System.out.println("\nきれいになりました。\n");
+
+		robot.cleanDish();
+
 	}
 
 }

@@ -31,40 +31,121 @@ package lesson07.challenge09;
 
 class Samurai {
 
-    protected String name;
+	protected String name;
 
-    void fight() {
-        System.out.println("戦うよ～。");
-    }
+	void fight() {
+		System.out.println("戦うよ～。");
+	}
 
-    void work() {
-        System.out.println("何かして働くよ～");
-    }
+	void work() {
+		System.out.println("何かして働くよ～");
+	}
 
 }
 
-
 //ここにRetainerクラスを記述
+class Retainer extends Samurai {
 
+	protected String domain;
+
+	public Retainer() {
+
+	}
+
+	/**
+	 * 
+	 */
+	public Retainer(String name, String domain) {
+		this.name = name;
+		this.domain = domain;
+	}
+
+	@Override
+	void work() {
+
+		System.out.println("年貢を取り立てるよ～。");
+
+	}
+
+	@Override
+	public String toString() {
+		String str = "拙者は" + domain + "藩士、" + name + "ともうす。";
+		return str;
+	}
+
+	@Override
+	public boolean equals(Object object) {
+		boolean match;
+		Retainer retainer = (Retainer) object;
+		if (this.domain.equals(retainer.domain)) {
+			return match = true;
+		} else {
+			return match = false;
+		}
+	}
+}
 
 //ここにRoninクラスを記述
+class Ronin extends Samurai {
 
+	/**
+	 * 
+	 */
+	public Ronin() {
+
+	}
+
+	/**
+	 * 
+	 */
+	public Ronin(String name) {
+		this.name = name;
+	}
+
+	void covered() {
+		super.fight();
+		System.out.println("傘張りするよ～。");
+	}
+
+	@Override
+	void work() {
+
+		System.out.println("傘張るよ～。");
+
+	}
+
+	@Override //re
+	public String toString() {
+		String str = "拙者は武州○△□村の浪人" + name + "ともうす。";
+		return str;
+	}
+
+}
 
 public class CastleTown {
 
-    public static void main(String[] args) {
-        System.out.println("5人の侍を配列に詰めます。\n");
+	public static void main(String[] args) {
+		System.out.println("5人の侍を配列に詰めます。\n");
 
+		//ここに適切な処理を記述
+		Samurai[] class_array = new Samurai[5];
+		for (int i = 0; i < class_array.length; i++) {
+			int num = (int) ((Math.random() * 10) % 2 + 1);
+			if (num == 1) {
+				class_array[i] = new Retainer();
+			} else {
+				class_array[i] = new Ronin();
+			}
 
-        //ここに適切な処理を記述
+		}
 
+		System.out.println("詰め終わりました。\n");
+		System.out.println("それぞれ表示してみます。\n");
 
-        System.out.println("詰め終わりました。\n");
-        System.out.println("それぞれ表示してみます。\n");
+		//ここに適切な処理を記述
+		for (int i = 0; i < 5; i++) {
+			System.out.println(class_array[i].getClass());
+		}
 
-
-        //ここに適切な処理を記述
-
-
-    }
+	}
 }

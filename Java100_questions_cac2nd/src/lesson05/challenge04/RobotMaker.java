@@ -41,30 +41,90 @@ package lesson05.challenge04;
 //メソッド名：randomWater(引数なし、戻り値void、waterに1～9の乱数を入れるメソッド)
 //メソッドpumpWaterを改修し、randomWater()を呼び出し、
 //「水を【※フィールドwaterの値】リットル出します」に出力を変更する
+class Robot {
+
+	private int energy;
+	private String name;
+	private int water;
+
+	/**
+	 * @return energy
+	 */
+	int getEnergy() {
+		return energy;
+	}
+
+	/**
+	 * @param energy セットする energy
+	 */
+	void setEnergy(int energy) {
+		this.energy = energy;
+	}
+
+	/**
+	 * @return nameString
+	 */
+	String getName() {
+		return name;
+	}
+
+	/**
+	 * @param nameString セットする nameString
+	 */
+	void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return water
+	 */
+	int getWater() {
+		return water;
+	}
+
+	/**
+	 * @param water セットする water
+	 */
+	void setWater(int water) {
+		this.water = water;
+	}
+
+	public void show() {
+		System.out.println(name + "\n");
+	}
+
+	public void randWater() {
+		water = (int) ((Math.random() * 10) % 9 + 1);
+		System.out.println("水を" + water + "リットル出します\n");
+	}
+
+}
 
 public class RobotMaker {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        System.out.println("Rさん：");
-        System.out.println("でもいつも1リットルじゃつまらないですね。\n");
-        System.out.println("G博士：");
-        System.out.println("じゃあ自分で改造すればいいんじゃ。わしゃ知らん。\n");
-        System.out.println("Rさん：");
-        System.out.println("え、これ改造していいんですか？\n");
-        System.out.println("G博士：");
-        System.out.println("いいぞ。出来るならな。\n");
-        System.out.println("Rさん：");
-        System.out.println("......改造終わりました。\n");
-        System.out.println("G博士：");
-        System.out.println("本当か！どれどれ\n");
+		System.out.println("Rさん：");
+		System.out.println("でもいつも1リットルじゃつまらないですね。\n");
+		System.out.println("G博士：");
+		System.out.println("じゃあ自分で改造すればいいんじゃ。わしゃ知らん。\n");
+		System.out.println("Rさん：");
+		System.out.println("え、これ改造していいんですか？\n");
+		System.out.println("G博士：");
+		System.out.println("いいぞ。出来るならな。\n");
+		System.out.println("Rさん：");
+		System.out.println("......改造終わりました。\n");
+		System.out.println("G博士：");
+		System.out.println("本当か！どれどれ\n");
 
-        //ここでRobotクラスのインスタンスを作り、
-        //（インスタンス名はrobot）
-        //pumpWaterを実行する。
+		//ここでRobotクラスのインスタンスを作り、
+		//（インスタンス名はrobot）
+		//pumpWaterを実行する。
+		Robot robot = new Robot();
+		robot.randWater();
 
-        System.out.println("G博士：");
-        System.out.println("......確かに出来とる。\n");
-    }
+		System.out.println("G博士：");
+		System.out.println("......確かに出来とる。\n");
+	}
 
 }
