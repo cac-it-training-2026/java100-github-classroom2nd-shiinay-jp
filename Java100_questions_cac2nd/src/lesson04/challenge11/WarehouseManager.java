@@ -70,7 +70,8 @@ public class WarehouseManager {
 		int[] array_C = new int[5];
 		int[] array_D = new int[5];
 		int[] array_E = new int[5];
-		int flag;
+		int[] boxes = new int[15];
+		int flag = 0;
 
 		//ここに配列に値を代入する処理を記述する。(要素はランダム)
 		for (int i = 0; i < array_C.length; i++) {
@@ -166,16 +167,9 @@ public class WarehouseManager {
 		System.out.println("\n\nでした。直してきます...\n");
 
 		//ここに詰め替え処理を記述する
-
-		flag = 0;
-		int[] boxes = new int[15];
 		for (int i = 0; i < boxes.length; i++) {
 
 			boxes[i] = 0;
-
-		}
-
-		for (int i = 0; i < boxes.length; i++) {
 
 			if (i < 5) {
 				if (array_C[i] != 0) {
