@@ -19,17 +19,36 @@
 package lesson06.challenge01;
 
 class Spaceship {
-    int air;
+	private int air;
+
+	/**
+	 * @return air
+	 */
+	public int getAir() {
+		return air;
+	}
+
+	/**
+	 * @param air セットする air
+	 */
+	public void setAir(int air) {
+		if (air > 0) {
+			this.air = air;
+			System.out.println("値をセットしました。");
+		} else {
+			System.out.println("適切な数値を入力してください。");
+		}
+	}
 }
 
 public class Astronaut {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Spaceship spaceship = new Spaceship();
+		Spaceship spaceship = new Spaceship();
 
-        spaceship.air = -10;
+		spaceship.setAir(-10);
 
-    }
+	}
 
 }
