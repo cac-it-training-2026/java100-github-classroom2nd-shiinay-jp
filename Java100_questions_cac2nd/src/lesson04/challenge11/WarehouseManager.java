@@ -70,7 +70,6 @@ public class WarehouseManager {
 		int[] array_C = new int[5];
 		int[] array_D = new int[5];
 		int[] array_E = new int[5];
-		int[] box = new int[5];
 		int flag;
 
 		//ここに配列に値を代入する処理を記述する。(要素はランダム)
@@ -167,76 +166,47 @@ public class WarehouseManager {
 		System.out.println("\n\nでした。直してきます...\n");
 
 		//ここに詰め替え処理を記述する
-		flag = 0;
-		for (int i = 0; i < box.length; i++) {
 
-			box[i] = 0;
+		flag = 0;
+		int[] boxes = new int[15];
+		for (int i = 0; i < boxes.length; i++) {
+
+			boxes[i] = 0;
 
 		}
 
-		for (int i = 0; i < array_C.length; i++) {
+		for (int i = 0; i < boxes.length; i++) {
 
-			if (array_C[i] != 0) {
+			if (i < 5) {
+				if (array_C[i] != 0) {
+					boxes[flag] = array_C[i];
+					flag += 1;
+				}
+			} else if (i < 10) {
+				if (array_D[i - 5] != 0) {
+					boxes[flag] = array_D[i - 5];
+					flag += 1;
+				}
 
-				box[flag] = array_C[i];
-				flag += 1;
-
+			} else {
+				if (array_E[i - 10] != 0) {
+					boxes[flag] = array_E[i - 10];
+					flag += 1;
+				}
 			}
 
 		}
 
-		for (int i = 0; i < box.length; i++) {
+		for (int i = 0; i < boxes.length; i++) {
 
-			array_C[i] = box[i];
+			if (i < 5) {
+				array_C[i] = boxes[i];
+			} else if (i < 10) {
+				array_D[i - 5] = boxes[i];
 
-		}
-
-		flag = 0;
-		for (int i = 0; i < box.length; i++) {
-
-			box[i] = 0;
-
-		}
-
-		for (int i = 0; i < array_D.length; i++) {
-
-			if (array_D[i] != 0) {
-
-				box[flag] = array_D[i];
-				flag += 1;
-
+			} else {
+				array_E[i - 10] = boxes[i];
 			}
-
-		}
-
-		for (int i = 0; i < box.length; i++) {
-
-			array_D[i] = box[i];
-
-		}
-
-		flag = 0;
-		for (int i = 0; i < box.length; i++) {
-
-			box[i] = 0;
-
-		}
-
-		for (int i = 0; i < array_E.length; i++) {
-
-			if (array_E[i] != 0) {
-
-				box[flag] = array_E[i];
-				flag += 1;
-
-			}
-
-		}
-
-		for (int i = 0; i < box.length; i++) {
-
-			array_E[i] = box[i];
-
 		}
 
 		System.out.println("Yさん：");
@@ -245,6 +215,7 @@ public class WarehouseManager {
 		System.out.print("C...");
 
 		//ここに配列Cの要素をすべて出力する処理を記述する。
+
 		for (int i = 0; i < array_C.length; i++) {
 
 			System.out.print(array_C[i]);
