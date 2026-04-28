@@ -40,12 +40,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Patisserieクラス	
+ */
 public class Patisserie {
 
 	public static void main(String[] args) throws IOException {
 
+		/**
+		 * シトロンの在庫個数
+		 */
 		double shitoron_num = 30.0;
+		/**
+		 * ショコラの在庫個数
+		 */
 		double shokora_num = 30.0;
+		/**
+		 * ピスターシュの在庫個数	
+		 */
 		double pisutashu_num = 30.0;
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -54,7 +66,9 @@ public class Patisserie {
 		System.out.println("シトロン　　　\\250・・・" + shitoron_num + "個");
 		System.out.println("ショコラ　　　\\280・・・" + shokora_num + "個");
 		System.out.println("ピスターシュ　\\320・・・" + pisutashu_num + "個");
-
+		/**
+		 * 購入数をユーザーが入力
+		 */
 		System.out.println("それぞれ何個ずつ買いますか？");
 
 		System.out.print("シトロン　　　>");
@@ -68,12 +82,16 @@ public class Patisserie {
 		System.out.print("ピスターシュ　>");
 		String pisutashu = reader.readLine();
 		double pisutashu_num_2 = Double.parseDouble(pisutashu);
-
+		/**
+		 * それぞれの合計金額およびすべての合計金額を算出
+		 */
 		double shitoron_sum = shitoron_num_2 * 250;
 		double shokora_sum = shokora_num_2 * 280;
 		double pisutashu_sum = pisutashu_num_2 * 320;
 		double all_sum = shitoron_sum + shokora_sum + pisutashu_sum;
-
+		/**
+		 * 以下、購入個数および料金を表示
+		 */
 		System.out.println("シトロン　　　" + shitoron + "個");
 		System.out.println("ショコラ　　　" + shokora + "個");
 		System.out.println("ピスターシュ　" + pisutashu + "個\n");

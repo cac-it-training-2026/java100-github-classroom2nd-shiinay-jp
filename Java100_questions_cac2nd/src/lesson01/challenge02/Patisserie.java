@@ -18,10 +18,14 @@
 
 package lesson01.challenge02;
 
+/**
+ * Patisserieクラス
+ */
 public class Patisserie {
 
 	public static void main(String[] args) {
 
+		//文章の出力
 		System.out.println("シトロン　　　\\250");
 		System.out.println("ショコラ　　　\\280");
 		System.out.println("ピスターシュ　\\320");

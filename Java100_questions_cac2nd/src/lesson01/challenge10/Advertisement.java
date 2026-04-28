@@ -1,9 +1,15 @@
 package lesson01.challenge10;
 
+/**
+ * Advertisementクラス
+ */
 public class Advertisement {
 
 	public static void main(String[] args) {
 
+		/**
+		 * 以下、お店のアルバイト募集の宣伝内容を記述
+		 */
 		System.out.println("募集要項：");
 		System.out.println("当店自慢のマカロンを手稲ににお届けする新し仲間を募集します。\n「分割」作業のお手伝いを中心に、お店を一緒に盛り上げませんか？");
 

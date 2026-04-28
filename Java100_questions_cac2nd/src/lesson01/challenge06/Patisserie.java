@@ -25,21 +25,39 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Patisserieクラス
+ */
 public class Patisserie {
 
 	public static void main(String[] args) throws IOException {
 
+		/**
+		 * シトロンの在庫個数
+		 */
 		int shitoron_num = 30;
+		/**
+		 * ショコラの在庫個数
+		 */
 		int shokora_num = 30;
+		/**
+		 * ピスターシュの在庫個数
+		 */
 		int pisutashu_num = 30;
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+		/**
+		 * おすすめ商品を表示（表示数：在庫数）
+		 */
 		System.out.println("本日のおすすめ商品です。\n");
 		System.out.println("シトロン　　　\\250・・・" + shitoron_num + "個");
 		System.out.println("ショコラ　　　\\280・・・" + shokora_num + "個");
 		System.out.println("ピスターシュ　\\320・・・" + pisutashu_num + "個");
 
+		/**
+		 * 購入数の入力
+		 */
 		System.out.println("それぞれ何個ずつ買いますか？");
 
 		System.out.print("シトロン　　　>");
@@ -54,6 +72,9 @@ public class Patisserie {
 		String pisutashu = reader.readLine();
 		int pisutashu_num_2 = Integer.parseInt(pisutashu);
 
+		/**
+		 * 以下、購入数及び在庫数を表示
+		 */
 		System.out.println("シトロン　　　" + shitoron + "個");
 		System.out.println("ショコラ　　　" + shokora + "個");
 		System.out.println("ピスターシュ　" + pisutashu + "個\n");

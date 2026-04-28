@@ -33,32 +33,52 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Patisserieクラス
+ */
 public class Patisserie {
 
 	public static void main(String[] args) throws IOException {
 
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		/**
+		 * シトロンの個数
+		 */
+		int shitoron_num;
+		/**
+		 * ショコラの個数
+		 */
+		int shokora_num;
+		/**
+		 * ピスターシュの個数
+		 */
+		int pisutashu_num;
 
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		/**
+		 * 最大３０個まで購入数を入力
+		 */
 		System.out.println("それぞれ何個ずつ買いますか？（最大３０個まで）");
 
 		System.out.print("シトロン　　　>");
 		String shitoron = reader.readLine();
-		int shitoron_num = Integer.parseInt(shitoron);
+		shitoron_num = Integer.parseInt(shitoron);
 
 		System.out.print("ショコラ　　　>");
 		String shokora = reader.readLine();
-		int shokora_num = Integer.parseInt(shokora);
+		shokora_num = Integer.parseInt(shokora);
 
 		System.out.print("ピスターシュ　>");
 		String pisutashu = reader.readLine();
-		int pisutashu_num = Integer.parseInt(pisutashu);
+		pisutashu_num = Integer.parseInt(pisutashu);
 
+		/**
+		 * それぞれの購入個数と合計金額を表示
+		 */
 		System.out.println("シトロン　　　" + shitoron + "個");
 		System.out.println("ショコラ　　　" + shokora + "個");
 		System.out.println("ピスターシュ　" + pisutashu + "個\n");
 		System.out.println("合計個数　　" + (shitoron_num + shokora_num + pisutashu_num) + "個");
-		System.out.println("合計金額　" + (shitoron_num * 250 + shokora_num * 280 + pisutashu_num * 320) + "円\n"
-				+ "");
+		System.out.println("合計金額　" + (shitoron_num * 250 + shokora_num * 280 + pisutashu_num * 320) + "円\n");
 		System.out.println("をお買い上げですね。\n承りました。");
 
 	}
