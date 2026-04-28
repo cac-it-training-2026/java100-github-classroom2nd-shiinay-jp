@@ -54,12 +54,86 @@ public class WarehouseManager {
 		int[] ABKosanArray1 = new int[5];
 		int[] ABKosanArray2 = new int[5];
 
-
 		//ここに重複チェックおよび値の代入処理を記述する①(1～5)
+		int[] random1 = { 0, 0, 0, 0, 0 };
+		int[] random2 = { 0, 0, 0, 0, 0 };
+		int num = 0;
+		int intputNum = 0;
+		int two = 0;
+		int four = 0;
+		int seven = 0;
+		int nine = 0;
 
+		for (int i = 0; i < 5; i++) {
+
+			while (true) {
+
+				num = 0;
+
+				intputNum = (int) (Math.random() * 10) % 5 + 1;
+
+				for (int j = 0; j < 5; j++) {
+
+					if (intputNum != random1[j]) {
+
+						num += 1;
+
+					}
+
+				}
+
+				if (num == 5) {
+
+					random1[i] = intputNum;
+					break;
+
+				}
+
+			}
+
+		}
+
+		for (int i = 0; i < random1.length; i++) {
+
+			ABKosanArray1[i] = random1[i];
+
+		}
 
 		//ここに重複チェックおよび値の代入処理を記述する②(6～10)
+		for (int i = 0; i < 5; i++) {
 
+			while (true) {
+
+				num = 0;
+
+				intputNum = (int) (Math.random() * 10) % 5 + 6;
+
+				for (int j = 0; j < 5; j++) {
+
+					if (intputNum != random2[j]) {
+
+						num += 1;
+
+					}
+
+				}
+
+				if (num == 5) {
+
+					random2[i] = intputNum;
+					break;
+
+				}
+
+			}
+
+		}
+
+		for (int i = 0; i < random2.length; i++) {
+
+			ABKosanArray2[i] = random2[i];
+
+		}
 
 		System.out.println("E主任：");
 		System.out.println("AB興産から新たに預かった荷物と以前から預かっている荷物の");
@@ -88,11 +162,35 @@ public class WarehouseManager {
 		System.out.println("E主任：");
 		System.out.println("その二つの荷物を奇数群、偶数群で入れ替えてください。\n");
 
-
-
 		//ここに奇数群(ABKosanArray1)と偶数群(ABKosanArray2)に振り分ける処理を記述する。
+		for (int i = 0; i < ABKosanArray1.length; i++) {
 
+			if (ABKosanArray1[i] == 2) {
+				two = i;
 
+			} else if (ABKosanArray1[i] == 4) {
+				four = i;
+
+			}
+
+		}
+
+		for (int i = 0; i < ABKosanArray2.length; i++) {
+
+			if (ABKosanArray2[i] == 7) {
+				seven = i;
+
+			} else if (ABKosanArray2[i] == 9) {
+				nine = i;
+
+			}
+
+		}
+
+		ABKosanArray1[two] = random2[seven];
+		ABKosanArray1[four] = random2[nine];
+		ABKosanArray2[seven] = random1[two];
+		ABKosanArray2[nine] = random1[four];
 
 		System.out.println("Yさん：");
 		System.out.println("はい、入れ替えました。");

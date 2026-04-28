@@ -38,26 +38,49 @@
 
 package lesson02.challenge06;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
 
-                int weight = 95;
+		/**
+		 * 体重
+		 */
+		int weight = 95;
 
-                System.out.println("探偵：");
-                System.out.println("犯人はどこから逃げたんですか？\n");
-                System.out.println("依頼主：");
-                System.out.println("おそらく、あのロープを使って1階に下りたのだと思います。");
-                System.out.println("その後、庭に置いてあるトランポリンを使って塀を超えたのではないかと\n");
-                System.out.println("助手：");
-                System.out.println("私の調査によると、ロープは80kg以上の体重で切れてしまいます。");
-                System.out.println("トランポリンは60kg以上ないと塀を超えられる可能性が低くなります。\n");
-                System.out.println("探偵：");
-                System.out.println("つまり容疑者の体重が" + weight + "kgであった場合、その人は...\n");
+		System.out.println("探偵：");
+		System.out.println("犯人はどこから逃げたんですか？\n");
+		System.out.println("依頼主：");
+		System.out.println("おそらく、あのロープを使って1階に下りたのだと思います。");
+		System.out.println("その後、庭に置いてあるトランポリンを使って塀を超えたのではないかと\n");
+		System.out.println("助手：");
+		System.out.println("私の調査によると、ロープは80kg以上の体重で切れてしまいます。");
+		System.out.println("トランポリンは60kg以上ないと塀を超えられる可能性が低くなります。\n");
+		System.out.println("探偵：");
+		System.out.println("つまり容疑者の体重が" + weight + "kgであった場合、その人は...\n");
 
-                // ここにif～else if～else文を入れる
+		// ここにif～else if～else文を入れる
+		/**
+		 * ①体重が８０以上ならば犯人ではない
+		 * ②体重が６０未満なら犯人である可能性が低い
+		 * ③①、②以外ならば犯人である可能性が高い
+		 */
+		if (weight >= 80) {
 
+			System.out.println(" \n犯人ではありませんね。");
 
-        }
+		} else if (weight < 60) {
+
+			System.out.println(" \n犯人である可能性が低いですね。");
+
+		} else {
+
+			System.out.println(" \n犯人である可能性が高いですね。");
+
+		}
+
+	}
 
 }

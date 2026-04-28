@@ -59,6 +59,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) throws IOException {
@@ -82,11 +85,32 @@ public class Detective {
 		System.out.println("2．Ｏ氏");
 		System.out.print("\n1か2をここに入力＞");
 
+		/**
+		 * ユーザーから選択肢を受け取る
+		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String numStr = br.readLine();
 		int num = Integer.parseInt(numStr);
 
-		//ここに記述する
+		/**
+		 * 条件が選ばれるまでループ
+		 */
+		switch (num) {
+		case 1:
+
+			System.out.println("探偵：\n不正解です。");
+			break;
+
+		case 2:
+
+			System.out.println("探偵：\n正解です。");
+			break;
+
+		default:
+
+			System.out.println("探偵：\nほかに選択肢はありませんよ");
+
+		}
 
 	}
 

@@ -17,16 +17,27 @@
 
 package lesson02.challenge02;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
 
+		/**
+		 * 以下文章を表示
+		 */
+
 		System.out.println("探偵：");
 		System.out.println("助手君スケジュールはどうなってるかね？\n");
-
+		/**
+		 * アポイントの可否
+		 */
 		boolean appointment = false;
-
-		if (appointment) {
+		/**
+		 * アポイントがfalseならば真
+		 */
+		if (!appointment) {
 			System.out.println("助手：");
 			System.out.println("いつも空いています。");
 		}

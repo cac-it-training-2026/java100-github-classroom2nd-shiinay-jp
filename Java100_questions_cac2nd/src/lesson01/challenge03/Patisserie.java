@@ -21,6 +21,31 @@
 
 package lesson01.challenge03;
 
+/**
+ * Patisserieクラス
+ */
 public class Patisserie {
+
+	public static void main(String[] args) {
+
+		/**
+		 * シトロンの個数
+		 */
+		int shitoron = 30;
+		/**
+		 * ショコラの個数
+		 */
+		int shokora = 30;
+		/**
+		 * ピスターシュの個数
+		 */
+		int pisutashu = 30;
+
+		//文章の出力
+		System.out.println("本日のおすすめ商品です。\n");
+		System.out.println("シトロン　　　\\250・・・" + shitoron + "個");
+		System.out.println("ショコラ　　　\\280・・・" + shokora + "個");
+		System.out.println("ピスターシュ　\\320・・・" + pisutashu + "個");
+	}
 
 }
