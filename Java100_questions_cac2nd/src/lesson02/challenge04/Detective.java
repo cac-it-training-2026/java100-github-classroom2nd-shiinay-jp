@@ -19,10 +19,15 @@
 
 package lesson02.challenge04;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
-
+		/**
+		 * ガソリンの量
+		 */
 		int gasolin = 100;
 
 		System.out.println("探偵：");
@@ -32,7 +37,7 @@ public class Detective {
 
 		//ここにif文を記述する。
 		//変数gasolinが10以上であるときにガソリンが足りているものとします。
-		if (gasolin > 9) {
+		if (gasolin >= 10) {
 
 			System.out.println("あ、やっぱり足りてました。");
 

@@ -34,10 +34,15 @@
 
 package lesson02.challenge05;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
-
+		/**
+		 * 身長
+		 */
 		int height = 190;
 
 		System.out.println("探偵：");
@@ -47,6 +52,9 @@ public class Detective {
 		System.out.println("探偵：");
 		System.out.println("犯人は...");
 
+		/**
+		 * 身長が１８５以上のときは真
+		 */
 		if (height >= 185) {
 
 			System.out.println("\n背の高い人ですね");

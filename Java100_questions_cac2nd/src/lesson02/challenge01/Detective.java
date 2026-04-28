@@ -18,12 +18,21 @@
 
 package lesson02.challenge01;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
 
+		/**
+		 * リクエストの可否
+		 */
 		boolean request = true;
 
+		/**
+		 * treuの時、文章を表示
+		 */
 		if (request) {
 			System.out.println("依頼主：");
 			System.out.println("あなたを名探偵と見込んで");

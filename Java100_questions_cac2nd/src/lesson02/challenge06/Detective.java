@@ -38,10 +38,16 @@
 
 package lesson02.challenge06;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
 
+		/**
+		 * 体重
+		 */
 		int weight = 95;
 
 		System.out.println("探偵：");
@@ -56,6 +62,11 @@ public class Detective {
 		System.out.println("つまり容疑者の体重が" + weight + "kgであった場合、その人は...\n");
 
 		// ここにif～else if～else文を入れる
+		/**
+		 * ①体重が８０以上ならば犯人ではない
+		 * ②体重が６０未満なら犯人である可能性が低い
+		 * ③①、②以外ならば犯人である可能性が高い
+		 */
 		if (weight >= 80) {
 
 			System.out.println(" \n犯人ではありませんね。");

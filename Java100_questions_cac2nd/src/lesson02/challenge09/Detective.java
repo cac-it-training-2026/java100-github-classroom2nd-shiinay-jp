@@ -42,10 +42,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) throws IOException {
 
+		/**
+		 * 以下、文章を表示
+		 */
 		System.out.println("探偵：");
 		System.out.println("容疑者の特定は出来ていますか？\n");
 		System.out.println("助手：");
@@ -58,6 +64,9 @@ public class Detective {
 		System.out.println("探偵：");
 		System.out.println("あなたが犯人だと思う人の身長と体重を入れてみてください。\n");
 
+		/**
+		 * ユーザーから身長および体重を受け取る
+		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("身長をここに入力＞");
 		String heightStr = br.readLine();
@@ -66,6 +75,9 @@ public class Detective {
 		int height = Integer.parseInt(heightStr);
 		int weight = Integer.parseInt(weightStr);
 
+		/**
+		 * ①身長１８５より大きく、②体重が６０～８０未満ならば犯人である可能性が高い
+		 */
 		if (height > 185 && (weight >= 60 && weight < 80)) {
 
 			System.out.println("探偵：\nその方は犯人である可能性がありますね。");

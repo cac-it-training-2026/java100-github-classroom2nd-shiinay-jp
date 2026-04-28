@@ -18,16 +18,25 @@
 
 package lesson02.challenge03;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) {
 
+		/**
+		 * 依頼の予算
+		 */
 		int budget = 501;
 
 		System.out.println("依頼主：");
 		System.out.println("宝石が見つかりましたら");
 		System.out.println(budget + "円をお支払いします。\n");
 
+		/**
+		 * 予算が５００より大きければ依頼を引き受ける
+		 */
 		if (budget > 500) {
 			System.out.println("探偵：");
 			System.out.println("喜んでお引き受けします。");

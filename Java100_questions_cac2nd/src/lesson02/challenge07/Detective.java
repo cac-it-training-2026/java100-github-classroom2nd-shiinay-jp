@@ -29,19 +29,32 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Detectiveクラス
+ */
 public class Detective {
 
 	public static void main(String[] args) throws IOException {
 
+		/**
+		 * 以下文章を表示
+		 */
 		System.out.println("探偵：");
 		System.out.println("ではここで犯人の身体的な特徴についておさらいしてみましょう。");
 		System.out.println("あなたが思う犯人の身長を適当に入力してみてください。\n");
 		System.out.print("ここに入力＞");
 
+		/**
+		 * 身長をユーザーの入力により受け取る
+		 */
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String information = reader.readLine();
 		int height = Integer.parseInt(information);
 
+		/**
+		 * 身長が１８５より大きいときは犯行が可能、
+		 * それ以外は犯行は難しい
+		 */
 		if (height > 185) {
 
 			System.out.println("探偵：\nその身長だと犯行が可能ですね。");
